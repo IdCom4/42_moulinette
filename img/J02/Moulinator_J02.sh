@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 16:58:45 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/15 14:56:42 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/15 15:53:51 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,11 @@ L_CYAN='\033[1;36m'
 
 U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
+J_PATH=`cat path`
 
 clear && echo "\n${YELL}====| MOULINATOR LAUNCHED |====\n\n"
+
+cat ${J_PATH}/ex00/ft_printalphabet.c
 
 echo "0" > score_total
 echo "0" > score_moulinette
