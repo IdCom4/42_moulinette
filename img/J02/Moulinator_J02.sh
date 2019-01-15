@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 16:58:45 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/15 15:53:51 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/15 15:55:03 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ J_PATH=`cat path`
 
 clear && echo "\n${YELL}====| MOULINATOR LAUNCHED |====\n\n"
 
-cat ${J_PATH}/ex00/ft_printalphabet.c
+cat ${J_PATH}/ex00/ft_print_alphabet.c
 
 echo "0" > score_total
 echo "0" > score_moulinette
