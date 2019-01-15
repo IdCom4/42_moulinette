@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 16:58:45 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/15 15:55:03 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/15 16:32:18 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,11 +24,8 @@ L_CYAN='\033[1;36m'
 
 U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
-J_PATH=`cat path`
 
-clear && echo "\n${YELL}====| MOULINATOR LAUNCHED |====\n\n"
-
-cat ${J_PATH}/ex00/ft_print_alphabet.c
+clear && echo "\n${YELL}=====================| MOULINATOR LAUNCHED |=====================\n\n"
 
 echo "0" > score_total
 echo "0" > score_moulinette
@@ -42,7 +39,7 @@ sh test_ex05.sh
 sh test_ex06.sh
 sh test_ex07.sh
 
-echo "\n${ORNG}===== BILAN ====${NC}\n"
+echo "\n${ORNG}===================== BILAN =====================${NC}\n"
 
 SCORE_TOTAL=`cat score_total`
 SCORE_MOULI=`cat score_moulinette`
@@ -52,4 +49,4 @@ echo "(100 * $SCORE_MOULI) / 8" | bc > score_moulinette
 SCORE_MOULI=`cat score_moulinette`
 echo "(without priorities consideration, $SCORE_MOULI/100)"
 
-echo "\n${YELL}====| MOULINATOR, OVER |====\n\n"
+echo "\n${YELL}=====================| MOULINATOR, OVER |=====================\n\n"

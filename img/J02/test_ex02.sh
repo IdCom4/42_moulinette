@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 19:16:15 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/15 15:14:58 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/15 16:38:07 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,12 @@ U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
 J_PATH=`cat path`
 
-echo "${ORNG}==== EX02 =====================\n"
+echo "${ORNG}===================== EX02 =====================\n"
 echo -n "" > error_log
 echo "${BLUE}-- Compilation --${NC}\n"
 echo "$> gcc -o user_exe ${FLAGS} m_ex02.c ft_putchar.c ft_print_numbers.c"
 
-gcc -o ${U_EX} ${FLAGS} m_ex02.c ../common/ft_putchar.c ${J_PATH}/ex02/ft_print_numbers.c 2> error_log
+gcc -o ${U_EX} ${FLAGS} m_ex02.c ../common/ft_putchar.c ~/${J_PATH}/ex02/ft_print_numbers.c 2> error_log
 ERROR=`cat error_log`
 if [ "${ERROR}" != "" ]
 then
@@ -46,7 +46,7 @@ echo "$> ./${U_EX} > u_output"
 echo "\n$>diff -U 3 u_output m_output > m_diff\n"
 
 ./J02_ex02_exe > m_output
-./J02/${U_EX} > u_output
+./${U_EX} > u_output
 
 diff -U 3 u_output m_output > m_diff
 M_DIFF=`cat m_diff`

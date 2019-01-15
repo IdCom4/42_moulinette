@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 19:13:01 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/15 15:12:36 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/15 16:31:24 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,12 @@ U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
 J_PATH=`cat path`
 
-echo "${ORNG}==== EX01 =====================\n"
+echo "${ORNG}===================== EX01 =====================\n"
 echo -n "" > error_log
 echo "${BLUE}-- Compilation --${NC}\n"
 echo "$> gcc -o user_exe ${FLAGS} m_ex01.c ft_putchar.c ft_print_reverse_alphabet.c"
 
-gcc -o ${U_EX} ${FLAGS} m_ex01.c ../common/ft_putchar.c ${J_PATH}/ex01/ft_print_reverse_alphabet.c 2> error_log
+gcc -o ${U_EX} ${FLAGS} m_ex01.c ../common/ft_putchar.c ~/${J_PATH}/ex01/ft_print_reverse_alphabet.c 2> error_log
 ERROR=`cat error_log`
 if [ "${ERROR}" != "" ]
 then

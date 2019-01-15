@@ -6,11 +6,11 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 19:07:19 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/15 15:10:24 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/15 16:31:37 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#!/bin/bash
+#!/bin/sh
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -23,12 +23,12 @@ U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
 J_PATH=`cat path`
 
-echo "${ORNG}==== EX00 =====================\n"
+echo "${ORNG}===================== EX00 =====================\n"
 echo "" > error_log
 echo "${BLUE}-- Compilation --${NC}\n"
 echo "$> gcc -o user_exe ${FLAGS} m_ex00.c ft_putchar.c ft_print_alphabet.c"
 
-gcc -o ${U_EX} ${FLAGS} m_ex00.c ../common/ft_putchar.c ${J_PATH}/ex00/ft_print_alphabet.c 2> error_log
+gcc -o ${U_EX} ${FLAGS} m_ex00.c ../common/ft_putchar.c ~/${J_PATH}/ex00/ft_print_alphabet.c 2> error_log
 ERROR=`cat error_log`
 if [ "${ERROR}" != "" ]
 then
