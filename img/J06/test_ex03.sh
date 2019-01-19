@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 23:20:09 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/19 15:13:23 by idcornua         ###   ########.fr        #
+/*   Updated: 2019/01/19 15:59:27 by idcornua         ###   ########.fr       */
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,10 +22,10 @@ NC='\033[0m'
 U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
 J_PATH=`cat path`
-J="05"
-E="01"
-S="1"
-EX="ft_putnbr.c"
+J="06"
+E="03"
+S="3"
+EX="ft_rev_params.c"
 COM="../common/ft_putchar.c"
 
 echo "${ORNG}===================== EX${E} =====================\n"
@@ -33,7 +33,7 @@ echo "" > error_log
 echo "${BLUE}-- Compilation --${NC}\n"
 echo "$> gcc -o user_exe ${FLAGS} m_ex${E}.c ${EX}"
 
-gcc -o ${U_EX} ${FLAGS} m_ex${E}.c ${COM} ~/${J_PATH}/ex${E}/${EX} 2> error_log
+gcc -o ${U_EX} ${FLAGS} ${COM} ~/${J_PATH}/ex${E}/${EX} 2> error_log
 ERROR=`cat error_log`
 if [ "${ERROR}" != "" ]
 then
@@ -46,25 +46,41 @@ else
 	echo "Compilation OK.\n"
 fi
 
-for i in `seq 1 3`;
+for i in `seq 1 4`;
 do
 	echo "${BLUE}-- Test 0${i} --${NC}\n"
-	TEST=""
 	if [ "$i" == "1" ];then
-		TEST=""
+		echo "$> ./J${J}_ex${E}_exe > m_output"
+		echo "$> ./${U_EX} > u_output"
+		echo "\n$>diff -U 10 u_output m_output > m_diff\n"
+
+    	./J${J}_ex${E}_exe > m_output
+		./${U_EX} > u_output
 	fi
 	if [ "$i" == "2" ];then
-		TEST="H3lLo\teVerY0n3, Wh4t'5         up ?"
+		echo "$> ./J${J}_ex${E}_exe \"c\" > m_output"
+		echo "$> ./${U_EX} \"c\" > u_output"
+		echo "\n$>diff -U 10 u_output m_output > m_diff\n"
+
+    	./J${J}_ex${E}_exe "c" > m_output
+		./${U_EX} "c" > u_output
 	fi
 	if [ "$i" == "3" ];then
-		TEST="\t\n\c\r\t"
-	fi
-	echo "$> ./J${J}_ex${E}_exe \"${TEST}\" > m_output"
-	echo "$> ./${U_EX} \"${TEST}\" > u_output"
-	echo "\n$>diff -U 10 u_output m_output > m_diff\n"
+		echo "$> ./J${J}_ex${E}_exe \"hi guys\" \"what's\" \"up ?\" > m_output"
+		echo "$> ./${U_EX} \"hi guys\" \"what's\" \"up ?\" > u_output"
+		echo "\n$>diff -U 10 u_output m_output > m_diff\n"
 
-    ./J${J}_ex${E}_exe "${TEST}" > m_output
-	./${U_EX} "${TEST}" > u_output
+    	./J${J}_ex${E}_exe "hi guys" "what's" "up ?" > m_output
+		./${U_EX} "hi guys" "what's" "up ?" > u_output
+	fi
+	if [ "$i" == "4" ];then
+		echo "$> ./J${J}_ex${E}_exe \"i everyone\" \"it's\" \"Jeff Kaplan\" \"from the\" \"overwatch team\" \"ur still\" \"bronze ?\" \";D\" > m_output"
+		echo "$> ./${U_EX} \"i everyone\" \"it's\" \"Jeff Kaplan\" \"from the\" \"overwatch team\" \"ur still\" \"bronze ?\" \";D\" > u_output"
+		echo "\n$>diff -U 10 u_output m_output > m_diff\n"
+
+    	./J${J}_ex${E}_exe "i everyone" "it's" "Jeff Kaplan" "from the" "overwatch team" "ur still" "bronze ?" ";D" > m_output
+		./${U_EX} "i everyone" "it's" "Jeff Kaplan" "from the" "overwatch team" "ur still" "bronze ?" ";D" > u_output
+	fi
 
 	diff -U 10 u_output m_output > m_diff
 	M_DIFF=`cat m_diff`
