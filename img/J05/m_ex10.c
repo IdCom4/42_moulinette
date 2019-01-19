@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/05 15:59:05 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/16 16:24:07 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+char	*ft_strcapitalize(char *str);
+
+int		main(int argc, char *argv[])
 {
-	int index;
+	(void)argc;
 
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	printf("%s\n", ft_strcapitalize(argv[1]));
+	return (0);
 }

@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/05 15:15:57 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/16 15:25:41 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+int		ft_strcmp(char *s1, char *s2);
+
+int		main(int argc, char *argv[])
 {
-	int index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	(void)argc;
+	printf("%d\n", ft_strcmp(argv[1], argv[2]));
+	return (0);
 }

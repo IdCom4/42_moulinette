@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/05 13:05:53 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/16 15:23:57 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <string.h>
 
-void	ft_putstr(char *str)
+void	ft_putstr(char *str);
+char	*ft_strcpy(char *dest, char *src);
+
+int		main(int argc, char *argv[])
 {
-	int index;
+	(void)argc;
+	char dest[40] = {0};
 
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	ft_putstr(ft_strcpy(dest, argv[1]));
+	return (0);
 }

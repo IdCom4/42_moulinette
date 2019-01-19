@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/05 13:38:40 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/16 15:24:05 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+
+int		main(int argc, char *argv[])
 {
-	int index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	(void)argc;
+	char dest[40] = {0};
+	int ag2 = atoi(argv[2]);
+	if (ag2 == 39)
+		ag2 = 50;
+	printf("%s\n", ft_strncpy(dest, argv[1], atoi(argv[2])));
+	return (0);
 }

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/06 00:33:37 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/17 11:29:47 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-void	ft_putstr(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+
+int main(int argc, char *argv[])
 {
-	int index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	(void)argc;
+	char dest[45] = "";
+	int ag2 = atoi(argv[2]);
+	
+	printf("%u\n", ft_strlcpy(dest, argv[1], ag2));
+	printf("%s\n\n", dest);
+	return (0);
 }

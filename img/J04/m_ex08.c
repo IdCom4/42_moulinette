@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   m_ex08.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/27 08:44:58 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/16 12:07:00 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int		ft_eight_queens_puzzle(void);
 void	ft_putchar(char c);
+void	ft_putnbr(int nb);
 
-void	ft_putstr(char *str)
+int		main(void)
 {
-	int index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		ft_putchar(str[index]);
-		index++;
-	}
+	ft_putnbr(ft_eight_queens_puzzle());
+	ft_putchar('\n');
+	return (0);
 }

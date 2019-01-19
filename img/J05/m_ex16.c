@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/04 10:45:57 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 14:45:50 by idcornua         ###   ########.fr       */
+/*   Created: 2018/07/05 17:46:32 by idcornua          #+#    #+#             */
+/*   Updated: 2019/01/16 17:25:27 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
+#include <string.h>
 
-void	ft_putstr(char *str)
+char	*ft_strcat(char *dest, char *src);
+
+int main(int argc, char *argv[])
 {
-	int index;
-
-	index = 0;
-	while (str[index] != '\0')
+	(void)argc;
+	char dest[50] = {0};
+	strcpy(dest, argv[1]);
+	if (strcmp("overflowTry", argv[1]) == 0)
 	{
-		ft_putchar(str[index]);
-		index++;
+		for (int i = 0; i < 3; i++)
+			strcat(dest, dest);
 	}
+	printf("%s\n", ft_strcat(dest, argv[2]));
+	return (0);
 }

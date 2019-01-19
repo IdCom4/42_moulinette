@@ -6,7 +6,7 @@
 #    By: idcornua <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/26 22:22:12 by idcornua          #+#    #+#              #
-#    Updated: 2019/01/19 11:00:40 by idcornua         ###   ########.fr        #
+#    Updated: 2019/01/19 11:01:04 by idcornua         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,30 +24,29 @@ L_CYAN='\033[1;36m'
 
 U_EX='user_exe'
 FLAGS='-Wall -Wextra -Werror'
+NBR_E=23
 
 clear && echo "\n${YELL}=====================| MOULINATOR LAUNCHED |=====================\n\n"
 
 echo "0" > score_total
 echo "0" > score_moulinette
 
-sh test_ex00.sh
-sh test_ex01.sh
-sh test_ex02.sh
-sh test_ex03.sh
-sh test_ex04.sh
-sh test_ex05.sh
-sh test_ex06.sh
-sh test_ex07.sh
-sh test_ex08.sh
-sh test_ex09.sh
-
+for i in `seq 0 $NBR_E`;
+do
+	if test $i -ge 10;then
+		sh test_ex${i}.sh
+	else
+		sh test_ex0${i}.sh
+	fi
+done
+E_F=`expr $NBR_E + 1`
 echo "\n${ORNG}===================== BILAN =====================${NC}\n"
 
 SCORE_TOTAL=`cat score_total`
 SCORE_MOULI=`cat score_moulinette`
-echo "${BLUE}$SCORE_TOTAL / 10 succeeded exercices"
-echo "${BLUE}$SCORE_MOULI / 10 final score for the Moulinette"
-echo "(100 * $SCORE_MOULI) / 10" | bc > score_moulinette
+echo "${BLUE}$SCORE_TOTAL / ${E_F} succeeded exercices"
+echo "${BLUE}$SCORE_MOULI / ${E_F} final score for the Moulinette"
+echo "(100 * $SCORE_MOULI) / ${E_F}" | bc > score_moulinette
 SCORE_MOULI=`cat score_moulinette`
 echo "(without priorities consideration, $SCORE_MOULI/100)"
 
