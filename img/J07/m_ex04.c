@@ -31,7 +31,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 1)
-	   printf(" size = %d KO\n", size);
+	   printf("1 size = %d KO\n", size);
 	if (strcmp(str, "coucou") != 0)
 		printf("cmp KO\n");
 	free(str);
@@ -40,7 +40,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 7)
-	   printf(" size = %d KO\n", size);
+	   printf("2 size = %d KO\n", size);
 	if (strcmp(str, "coucou les gens\ncomment\tallez vous ?") != 0)
 		printf("cmp KO\n");
 	free(str);
@@ -49,7 +49,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 2)
-	   printf(" size = %d KO\n", size);
+	   printf("3 size = %d KO\n", size);
 	if (strcmp(str, "coucou vous") != 0)
 		printf("cmp KO\n");
 	free(str);
@@ -58,7 +58,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 3)
-	   printf(" size = %d KO\n", size);
+	   printf("4 size = %d KO\n", size);
 	if (strcmp(str, "salut,ca\tva\tbien?") != 0)
 		printf("cmp KO\n");
 	free(str);
@@ -67,7 +67,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 1)
-	   printf(" size = %d KO\n", size);
+	   printf("5 size = %d KO\n", size);
 	if (strcmp(str, "   \t\n  \t salut\t   \n\n\n\t") != 0)
 		printf("cmp KO\n");
 	free(str);
@@ -76,7 +76,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 0)
-	   printf("size = %d KO\n", size);
+	   printf("6 size = %d KO\n", size);
 	if (strcmp(str, "\t\t\n\n   \t\n  \t") != 0)
 		printf("cmp KO\n");
 	free(str);
@@ -85,7 +85,7 @@ int main(void)
 	tab = ft_split_whitespaces(str);
 	size = print_tab(tab);
 	if (size != 3)
-	   printf("size = %d KO\n", size);
+	   printf("7 size = %d KO\n", size);
 	if (strcmp(str, "\t\t\n    \t\n \t \n coucou \t  \n\n \t le\t\n  monde    \t  \n\n \t") != 0)
 		printf("cmp KO\n");
 	free(str);
