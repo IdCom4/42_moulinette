@@ -1,0 +1,31 @@
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:59:11: error: implicit declaration of function 'ft_strdup' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                return (ft_strdup("0"));
+                        ^
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:59:10: error: incompatible integer to pointer conversion returning 'int' from a function with result type 'char *' [-Werror,-Wint-conversion]
+                return (ft_strdup("0"));
+                       ^~~~~~~~~~~~~~~~
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:60:17: error: implicit declaration of function 'ft_strnew' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        if (!(result = ft_strnew(0)))
+                       ^
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:60:15: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+        if (!(result = ft_strnew(0)))
+                     ^ ~~~~~~~~~~~~
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:61:11: error: use of undeclared identifier 'NULL'
+                return (NULL);
+                        ^
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:67:12: error: implicit declaration of function 'ft_strjoinf' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                result = ft_strjoinf(result, " ", 0);
+                         ^
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:67:10: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                result = ft_strjoinf(result, " ", 0);
+                       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:73:10: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+                result = ft_strjoinf(result, "-", 0);
+                       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:88:18: error: use of undeclared identifier 'nb'
+        len = ft_strlen(nb);
+                        ^
+/Users/idcornua/piscine_c_07_2018/J07_/ex06/ft_convert_base.c:92:42: error: implicit declaration of function 'ft_power' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                result += get_value(*nbr, base_from) * ft_power(base_len, len);
+                                                       ^
+10 errors generated.
