@@ -43,8 +43,10 @@ int	main(void)
 	}
 
 	size = ft_ultimate_range(&t, 30, 20);
-	if (t || size != 0)
-		printf("KO\n");
+	if (t)
+		printf("t exist = KO\n");
+	else if (size != 0)
+		printf("size = %d KO\n", size);
 	else
 		printf("OK\n");
 	
