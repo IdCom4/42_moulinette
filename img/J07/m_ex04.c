@@ -9,7 +9,7 @@ static int	print_tab(char **tab)
 	int i = 0;
 	for (i = 0; tab[i] != 0; i++)
 	{
-		printf("%d = %s\n", i, tab[i]);
+		printf("%s\n", i, tab[i]);
 		free(tab[i]);
 	}
 	free(tab);
