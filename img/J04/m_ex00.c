@@ -6,7 +6,7 @@
 /*   By: idcornua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/27 08:12:27 by idcornua          #+#    #+#             */
-/*   Updated: 2019/01/16 11:30:54 by idcornua         ###   ########.fr       */
+/*   Updated: 2019/02/12 12:10:46 by idcornua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int		main(void)
 	ft_putnbr(ft_iterative_factorial(5));
 	ft_putchar('\n');
 	ft_putnbr(ft_iterative_factorial(11));
+	ft_putchar('\n');
+	ft_putnbr(ft_iterative_factorial(13));
 	ft_putchar('\n');
 	return (0);
 }
